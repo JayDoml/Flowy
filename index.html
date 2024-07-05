@@ -102,6 +102,21 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: var(--text-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+        }
         .wave-bg {
             position: fixed;
             top: 0;
@@ -134,6 +149,83 @@
         }
         .glow-wave:nth-child(3) {
             animation-delay: -13.33s, -5.33s;
+        }
+        .testimonials {
+            padding: 100px 0;
+            background: rgba(255, 255, 255, 0.03);
+            position: relative;
+        }
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 50px;
+        }
+        .testimonial-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonial-grid {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .testimonial-card {
+            flex: 0 0 calc(33.333% - 40px);
+            margin: 0 20px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.2);
+        }
+        .testimonial-video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            color: var (--accent-color);
+        }
+        .testimonial-company {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--accent-color);
+            color: var(--bg-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        .carousel-arrow:hover {
+            background: var(--text-color);
+        }
+        .carousel-arrow.left {
+            left: 10px;
+        }
+        .carousel-arrow.right {
+            right: 10px;
         }
         @keyframes waveFlow {
             0% { transform: translateX(0) translateY(0) scale(1); }
@@ -262,8 +354,9 @@
     <!-- Home Section -->
     <section id="home" class="hero">
         <div class="container">
-            <h1>AI-Powered Workflow Automation</h1>
-            <p class="subtitle">Transforming businesses with intelligent automation and AI solutions</p>
+            <h1>Unleash the Power of AI in Your Workflow</h1>
+            <p class="subtitle">Flow Fusion combines cutting-edge AI with intuitive automation to streamline your business processes and boost productivity.</p>
+            <a href="#services" class="cta-button">Learn More</a>
         </div>
     </section>
 
@@ -308,6 +401,69 @@
                     <h2>Internal Chatbots</h2>
                     <p class="service-description">Improve internal communication and knowledge sharing with AI chatbots tailored for your organization's needs.</p>
                     <a href="#internal-chatbots" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <div class="testimonial-carousel">
+                <div class="carousel-arrow left">&#8249;</div>
+                <div class="carousel-arrow right">&#8250;</div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-video">
+                            <img alt="Video testimonial of Andre Haykal Jr., showing him smiling and discussing ListKit's success" src="video-placeholder-1.jpg" width="300" height="169">
+                        </div>
+                        <div class="testimonial-content">
+                            "Flow Fusion added $25,000 MRR to our business in just 2 days! The AI-driven automation has revolutionized our workflow."
+                        </div>
+                        <div class="testimonial-author">Andre Haykal Jr.</div>
+                        <div class="testimonial-company">Founder, ListKit & Client Ascension</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-video">
+                            <img alt="Animated video showing coins and financial growth charts" src="video-placeholder-2.jpg" width="300" height="169">
+                        </div>
+                        <div class="testimonial-content">
+                            "The seamless integration with our existing tools made adoption a breeze. Our team's productivity has skyrocketed!"
+                        </div>
+                        <div class="testimonial-author">Sarah Johnson</div>
+                        <div class="testimonial-company">CEO, TechInnovate Inc.</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-video">
+                            <img alt="Animated video displaying interconnected profile cards and data flow" src="video-placeholder-3.jpg" width="300" height="169">
+                        </div>
+                        <div class="testimonial-content">
+                            "The insights we've gained from Flow Fusion's intelligent analytics have been game-changing for our business strategy."
+                        </div>
+                        <div class="testimonial-author">Michael Chen</div>
+                        <div class="testimonial-company">CTO, DataDrive Solutions</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-video">
+                            <img alt="Video showing a team collaborating in a modern office setting" src="video-placeholder-4.jpg" width="300" height="169">
+                        </div>
+                        <div class="testimonial-content">
+                            "Flow Fusion has transformed how we collaborate. Our team's efficiency has improved by 40% since implementation."
+                        </div>
+                        <div class="testimonial-author">Emily Rodriguez</div>
+                        <div class="testimonial-company">Head of Operations, FutureTech Corp</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-video">
+                            <img alt="Animated infographic showing improved customer satisfaction metrics" src="video-placeholder-5.jpg" width="300" height="169">
+                        </div>
+                        <div class="testimonial-content">
+                            "Our customer satisfaction scores have increased by 30% thanks to Flow Fusion's AI-powered support automation."
+                        </div>
+                        <div class="testimonial-author">Alex Thompson</div>
+                        <div class="testimonial-company">Customer Success Manager, HappyClients Ltd.</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -393,12 +549,30 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .about-content, .about-image, .contact-form, .contact-info').forEach(el => {
+        document.querySelectorAll('.testimonial-card, .service-card, .about-content, .about-image, .contact-form, .contact-info').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(el);
         });
+
+        // Carousel functionality
+        const carousel = document.querySelector('.testimonial-grid');
+        const cards = document.querySelectorAll('.testimonial-card');
+        const cardWidth = cards[0].offsetWidth + 40; // Including margins
+        let currentIndex = 0;
+
+        function moveCarousel(direction) {
+            if (direction === 'next' && currentIndex < cards.length - 3) {
+                currentIndex++;
+            } else if (direction === 'prev' && currentIndex > 0) {
+                currentIndex--;
+            }
+            carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+
+        document.querySelector('.carousel-arrow.left').addEventListener('click', () => moveCarousel('prev'));
+        document.querySelector('.carousel-arrow.right').addEventListener('click', () => moveCarousel('next'));
     </script>
 </body>
 </html>
